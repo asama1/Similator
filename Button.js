@@ -5,8 +5,9 @@ class Button{
   
   show(){
     
-   
+   noFill();
      rect(153,160, 80, 50)
+    fill(0)
      text("START", 175, 190)
     
   }
@@ -19,6 +20,7 @@ class Button{
      zlick = 0
      console.log('mouse be clicked')
      blackOut();
+    wordo();
      removeElements();
 }
   }
@@ -26,4 +28,10 @@ class Button{
 function blackOut(){
   fill(zlick);
 }
+function wordo(){
+  fill(1000)
+  text(wordso, 100, 100)
+  
+}
+
 
