@@ -1,22 +1,25 @@
 
+class Button {
+  constructor(x) {
+    this.c = x;
+  }
 
-//let sbot = "startButton.js"
-let sbot;
-let a;
-let zlick
-zlick = 220
-function setup() {
-  createCanvas(400, 400);
-  a = new thing();
-   sbot= new Button();
-}
+  show() {
+    rect(153, 160, 80, 50);
+    text("START", 175, 190);
+  }
 
-function draw() {
-  background(zlick);
-  
- 
-  sbot.show();
-  sbot.update();
-  
-  
+  update() {
+    if (
+      mouseX > 160 &&
+      mouseX < 210 &&
+      mouseY > 180 &&
+      mouseY < 210 &&
+      mouseIsPressed === true
+    ) {
+      this.c = this.c + 1;
+      zlick = 0;
+      console.log(this.c);
+    }
+  }
 }
